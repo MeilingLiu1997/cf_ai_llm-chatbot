@@ -1,5 +1,5 @@
 {
-  "name": "llm-chat-app-template",
+  "name": "cf_ai_llm-chatbot",
   "description": "A simple chat application powered by Cloudflare Workers AI",
   "private": true,
   "cloudflare": {
@@ -32,5 +32,8 @@
     "dev": "wrangler dev",
     "start": "wrangler dev",
     "test": "vitest"
+  },
+  "dependencies": {
+    "agents": "^0.2.2"
   }
 }

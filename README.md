@@ -38,6 +38,8 @@ This project is an AI-powered chatbot application deployed on Cloudflare Workers
 ## Demo
 
 Deployed on the CloudFlare: https://cf_ai_llm-chatbot.mliu1223.workers.dev
+AI Agent on the CloudFlare: https://agents-starter.mliu1223.workers.dev
+
 
 <!-- dash-content-end -->
 

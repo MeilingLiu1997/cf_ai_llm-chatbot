@@ -15,7 +15,10 @@ const MODEL_ID = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
 
 // Default system prompt
 const SYSTEM_PROMPT =
-  "You are a helpful, friendly assistant. Provide concise and accurate responses.";
+  "You are a cybersecurity assistant who helps developers write secure C/C++ code.";
+
+const USER_PROMPT = 
+  "How about weather today?";
 
 export default {
   /**
@@ -65,6 +68,7 @@ async function handleChatRequest(
     // Add system prompt if not present
     if (!messages.some((msg) => msg.role === "system")) {
       messages.unshift({ role: "system", content: SYSTEM_PROMPT });
+      messages.unshift({ role: "user", content: USER_PROMPT });
     }
 
     const response = await env.AI.run(
@@ -76,11 +80,11 @@ async function handleChatRequest(
       {
         returnRawResponse: true,
         // Uncomment to use AI Gateway
-        // gateway: {
-        //   id: "YOUR_GATEWAY_ID", // Replace with your AI Gateway ID
-        //   skipCache: false,      // Set to true to bypass cache
-        //   cacheTtl: 3600,        // Cache time-to-live in seconds
-        // },
+        gateway: {
+          id: "first-gateway", // Replace with your AI Gateway ID
+          skipCache: false,      // Set to true to bypass cache
+          cacheTtl: 3600,        // Cache time-to-live in seconds
+        },
       },
     );
 

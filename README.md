@@ -1,46 +1,27 @@
-# LLM Chat Application Template
+# cf_ai_llm-chatbot
 
-A simple, ready-to-deploy chat application template powered by Cloudflare Workers AI. This template provides a clean starting point for building AI chat applications with streaming responses.
+This project is an AI-powered chatbot application deployed on Cloudflare Workers AI, using the Llama 3.3 model. It is built upon the official Cloudflare `llm-chat-app-template` and customized to demonstrate AI workflows, chat interaction, and memory/state management within the Cloudflare ecosystem.
+
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/llm-chat-app-template)
 
 <!-- dash-content-start -->
 
-## Demo
-
-This template demonstrates how to build an AI-powered chat interface using Cloudflare Workers AI with streaming responses. It features:
-
-- Real-time streaming of AI responses using Server-Sent Events (SSE)
-- Easy customization of models and system prompts
-- Support for AI Gateway integration
-- Clean, responsive UI that works on mobile and desktop
-
 ## Features
+- Powered by llama-3.3-70b-instruct-fp8-fast on Cloudflare Workers AI (via remote API)
+- Workflow and coordination using Cloudflare Workers and Durable Objects
+- User input via chat interface (Cloudflare Pages)
+- Basic conversation memory/state retention
+- Deployed on Cloudflare Workers and accessible via provided link
 
-- 💬 Simple and responsive chat interface
-- ⚡ Server-Sent Events (SSE) for streaming responses
-- 🧠 Powered by Cloudflare Workers AI LLMs
-- 🛠️ Built with TypeScript and Cloudflare Workers
-- 📱 Mobile-friendly design
-- 🔄 Maintains chat history on the client
-- 🔎 Built-in Observability logging
-<!-- dash-content-end -->
-
-## Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v18 or newer)
-- [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
-- A Cloudflare account with Workers AI access
 
 ### Installation
 
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/cloudflare/templates.git
-   cd templates/llm-chat-app
+   git clone https://github.com/MeilingLiu1997/cf_ai_llm-chatbot.git
+   cd cf_ai_llm-chatbot
    ```
 
 2. Install dependencies:
@@ -53,6 +34,21 @@ This template demonstrates how to build an AI-powered chat interface using Cloud
    ```bash
    npm run cf-typegen
    ```
+
+## Demo
+
+Deployed on the CloudFlare: https://cf_ai_llm-chatbot.mliu1223.workers.dev
+
+<!-- dash-content-end -->
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or newer)
+- [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
+- A Cloudflare account with Workers AI access
+
 
 ### Development
 
